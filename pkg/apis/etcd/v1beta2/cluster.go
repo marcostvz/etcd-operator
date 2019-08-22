@@ -149,6 +149,10 @@ type PodPolicy struct {
 	// More info: https://github.com/docker-library/busybox/issues/27
 	BusyboxImage string `json:"busyboxImage,omitempty"`
 
+	// fetch-backup init container image used when restoring from backup.
+	// default is tutum/curl
+	CurlImage string `json:"curlImage,omitempty"`
+
 	// SecurityContext specifies the security context for the entire pod
 	// More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context
 	SecurityContext *v1.PodSecurityContext `json:"securityContext,omitempty"`
